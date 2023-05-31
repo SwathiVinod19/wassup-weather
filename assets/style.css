@@ -1,0 +1,264 @@
+.container-one, #para1{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+   text-align: center;
+    background-color: skyblue;
+    width:100%;
+
+}
+*{
+    background-color: aliceblue;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.intro{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.today-details{
+     margin: 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+#container-two{
+    display: flex;
+}
+
+#cityInput, #cityName, #inputContainer,button{
+margin: 3px;
+padding:5px;
+text-align:center;
+font-size:1.3rem;
+font-weight:bold;
+
+}
+#searchBtn{
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    margin-left: 50%;
+    border-radius: 0.1rem;
+    border-style: solid;
+    background-color:lightgrey;
+}
+
+#weatherContainer{
+    margin-top:1rem;
+    margin-left: 20%;
+    align-items: center;
+    height: 400px;
+}
+
+#todayContainer{
+margin: 0%;
+padding: 0%;
+width:500px;    
+}
+
+#iconsContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.1rem;
+    align-items: center;
+    width:fit-content ; 
+    border: 2px dotted darkgray;    
+    border-radius: 10px;
+    background-size:contain;
+}
+.today-icon{
+  
+    float: center;
+    height:fit-content;
+    width:400px;
+    margin: 2rem;
+    border: 2px solid rgb(48, 47, 47);
+    border-radius: 10px;
+   
+}
+.inputs-icon{
+    float: right;
+    height:fit-content;
+    width:fit-content;
+    border: 2px dotted rgb(54, 51, 51);
+    border-radius: 10px;  
+    margin-left: 3rem;
+    margin-top: 2rem;
+    background-color:skyblue;
+   
+}
+.currentImage {
+    height: 6rem;
+    width:auto;
+    display: flex;
+    justify-content: center;
+    background-color: skyblue;
+}
+.currentImgClass{
+    height: 6rem;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    background-color: skyblue;
+}
+.historyList{
+    margin: 0.1rem;
+    padding:0.1rem;
+    text-align:center;
+    font-size:1.4rem;
+    color: darkslategray;
+    font-weight: bold;
+    text-align: center;
+}
+.histItems{
+    margin: 0.1rem;
+    padding:0.1rem;  
+}
+
+.icons{
+    display: inline-block;
+    height:fit-content;
+    width:fit-content;
+    margin: 1rem;
+    border: 2px solid rgb(48, 47, 47);
+    border-radius: 10px;  
+}
+
+.image{
+    height: 3.5rem;
+    width:auto;
+    background-color:  skyblue;
+    align-items: center;
+
+}
+
+.imgClass{
+    height: 3.5rem;
+    width:auto;
+    background-color:  skyblue;
+    padding-left: 3rem;
+
+}
+
+.date{
+    margin: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+.currentValues{
+    text-align: center;
+    display:inline-block;
+    height: 2rem;
+    width:fit-content;
+    margin-left:1rem;  
+    font-family:Georgia, 'Times New Roman', Times, serif;
+     font-size: 1.3rem;
+     margin-top: 0.2rem;
+     margin-bottom: 0.2rem;
+     padding:0.2rem;
+}
+
+.Values{
+    font-size: 1.2rem;
+    text-align: center;
+    display: inline-block;
+    height: 1rem;
+    width:fit-content;
+    margin-left: 2.5rem; 
+    margin: 0.5rem;
+}
+
+@media screen and (max-width:1000px) {
+    #container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    #iconsContainer{
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        align-items: center;
+        width:fit-content; 
+        align-items: center; 
+        padding: 0.6rem;  
+        border: 2px dotted darkgray;    
+        border-radius: 10px;
+        background-size:contain;
+        margin-left: 2rem;
+    
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    *{
+       
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+
+h1{
+text-align: center;
+    }
+.container-one{
+   padding-right:0;
+   padding-left: 0;
+   padding-top: 1rem;
+
+}
+body{
+    padding: 0;
+}
+#dayOfWeek{
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: brown;
+}
+#currentDay{
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: brown;
+}
+
+#cityInput, #cityName, #inputContainer,button{
+margin:0.2rem;
+padding:0.2rem;
+text-align:center;
+font-size:1.2rem;
+font-weight:bold;
+
+}
+#container{
+    display: flex;
+    flex-direction: column;
+}
+#inputContainer{
+    margin-left: 0;
+}
+#weatherContainer {
+ 
+    margin-left: 0;  
+} 
+#iconsContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    align-items: center;
+    width:fit-content; 
+    align-items: center; 
+    padding: 0.6rem;  
+    border: 2px dotted darkgray;    
+    border-radius: 10px;
+    background-size:contain;
+    margin-left: 2rem;
+
+}
+}
+
