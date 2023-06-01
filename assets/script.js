@@ -132,3 +132,55 @@ function GetTodayWeather(){
 
     }) 
 }
+//get the five day forecast
+function GetInfo() {
+    console.log('GETTING INFO!')
+
+    fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + newName.value + '&appid=311e4c3dcf1329455ed7e414c6176a10')
+        .then(response => response.json())
+        .then(data => {
+            console.log("GOT INMFO")
+            console.log(data)
+            iconsContainer.innerHTML = ""
+            for (i = 4; i < data.list.length; i += 8) {
+                var cardElement = document.createElement("div")
+                cardElement.classList.add("icons")
+                var dayEl = document.createElement("p")
+                dayEl.classList.add("date")
+                console.log( data.list[i].dt_txt)
+                console.log( data.list[i].dt_txt.split(" "))
+                dayEl.innerHTML = data.list[i].dt_txt.split(" ")[0]
+                cardElement.append(dayEl)
+                var imageContainer = document.createElement("div")
+                imageContainer.classList.add("image")
+                var imageEl = document.createElement("img")
+                imageEl.classList.add("imgClass")
+                imageEl.src = "http://openweathermap.org/img/wn/" +
+                    data.list[i+2].weather[0].icon
+                    + ".png";
+                cardElement.append(imageContainer)
+                imageContainer.append(imageEl)
+                var tempEl = document.createElement("p")
+                tempEl.classList.add("Values")
+                tempEl.innerHTML = "Temp : "+ Number(data.list[i].main.temp - 273.15).toFixed(1) + " ° c";
+                var tempfeelsLike = document.createElement("p")
+                tempfeelsLike.classList.add("Values")
+                tempfeelsLike.innerHTML = "Feels like : " + Number(data.list[i].main.feels_like - 273.15).toFixed(1) + " ° c";
+                var des = document.createElement("p")
+                des.classList.add("Values")
+                des.innerHTML = "Description: " + String(data.list[i].weather[0].description);
+                var windEl = document.createElement("p")
+                windEl.classList.add("Values")
+                windEl.innerHTML = "Wind speed: " + Number(data.list[i].wind.speed).toFixed(1) + "km/h";
+                var humidityEl = document.createElement("p")
+                humidityEl.classList.add("Values")
+                humidityEl.innerHTML = "Humidity : " + Number(data.list[i].main.humidity).toFixed(1) + " %";
+                cardElement.append(tempEl, tempfeelsLike, des, windEl, humidityEl)
+                iconsContainer.append(cardElement)
+
+            }
+
+        })
+
+        .catch(err => alert("Invalid Input! Error in the country name"))
+}
