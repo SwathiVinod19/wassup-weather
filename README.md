@@ -19,10 +19,15 @@ The default page of the weather dashboard
 A screenshot with search history
 
 #### Links to the repository and the deployed page
-
+Link to the repository:  https://github.com/SwathiVinod19/wassup-weather
+Link to the deployed page : https://swathivinod19.github.io/wassup-weather/
 
 ##### Acknowledgements and references
-I found this project especially challenging. It took me a long time to fetch the data and to understand server side API. I would like to thank my tutor Alexis Gonzalis for the guidance and support. I read through the content in websites and watched my class videos, got support from peers to understand some concepts. 
+I found this project especially challenging. 
+It took me a long time to fetch the data and to understand server side API. 
+I would like to thank my tutor Alexis Gonzalis for the guidance and support. I was struggling with making the page dynamic and he helped me with the web api code in javascript. With his help, I was able to change the code to a more dynamic one. 
+Along with this, I read through the content in websites and watched class videos, got support from peers to understand some concepts. 
+
 https://openweathermap.org/api
 https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 https://www.w3schools.com/jsref/prop_win_localstorage.asp
