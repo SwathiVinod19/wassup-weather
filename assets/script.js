@@ -3,6 +3,7 @@ let SaveBtn = document.getElementById("searchBtn");
 let history = document.querySelector(".historyList");
 let searchHistory = document.getElementById("searchHistory");
 var iconsContainer = document.getElementById("iconsContainer");
+var cityName = document.getElementById('cityName');
 
 //The following code is to show the date and day on the weather dashboard
 const date = new Date();
@@ -29,6 +30,12 @@ function renderCities() {
         history.appendChild(buttonEl);
     }
 }
+history.addEventListener("click", function(event) {
+    var cityName = event.target.textContent;
+    newName.value = cityName;
+    GetTodayWeather();
+    GetInfo();
+  });
 
 //The following function is called to get stored cities from local storage
 function init() {
@@ -69,7 +76,8 @@ SaveBtn.addEventListener("click", function (event) {
 })
 //Get the current weather details
 function GetTodayWeather(){
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+ newName.value +'&appid=bd544429cdc8186266bfe359b9ffa690')
+    let cityName = newName.value
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+ cityName +'&appid=bd544429cdc8186266bfe359b9ffa690')
     .then(response => response.json())
     .then(data => {
         console.log ("Fetching Today's Data")
@@ -134,9 +142,10 @@ function GetTodayWeather(){
 }
 //get the five day forecast
 function GetInfo() {
+    let cityName = newName.value
     console.log('GETTING INFO!')
 
-    fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + newName.value + '&appid=311e4c3dcf1329455ed7e414c6176a10')
+    fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&appid=311e4c3dcf1329455ed7e414c6176a10')
         .then(response => response.json())
         .then(data => {
             console.log("GOT INMFO")
