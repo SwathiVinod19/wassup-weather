@@ -14,7 +14,7 @@ This app is made with HTML,CSS and Javascript.
 
 The default page of the weather dashboard
 
-![Search-History](https://github.com/SwathiVinod19/wassup-weather/assets/129353324/011e709b-6d3d-41e6-b5ba-5746da8fc8d8)
+![updated-screenshot](https://github.com/SwathiVinod19/wassup-weather/assets/129353324/f2018e87-b532-4ae8-8d34-bc05ef045da9)
 
 A screenshot with search history
 
