@@ -51,7 +51,7 @@ function init() {
 
 function StoreCities() {
 
-    localStorage.setItem("cities", JSON.stringify(cityHistory));
+    localStorage.setItem("cityHistory", JSON.stringify(cityHistory));
 }
 //The screen that loads with the default details
 function DefaultScreen() {
